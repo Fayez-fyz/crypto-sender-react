@@ -27,7 +27,7 @@ const HomePage = () => {
     if (ethereum) {
       ethereum.on("accountsChanged", handleAccountChanger);
     }
-  }, []);
+  }, [account]);
 
   const handleAccountChanger = (accounts) => {
     console.log(accounts[0]);
@@ -141,7 +141,7 @@ const HomePage = () => {
   };
   return (
     <div className="max-w-screen-lg mx-auto  ">
-      <NavbarComponent connectWallet={connectWallet} />
+      <NavbarComponent />
       <HomeComponent
         form={form}
         connectWallet={connectWallet}
